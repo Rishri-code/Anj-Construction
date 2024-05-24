@@ -1,0 +1,336 @@
+:root {
+    --orange-color: #e94c1b;
+}
+
+.dropdown-item:active {
+    background-color: var(--orange-color) !important; 
+    color: white !important; 
+    transition: background-color 0.3s ease;
+}
+
+.nav-link.active {
+    color: var(--orange-color) !important; 
+    transition: color 0.6s ease;
+}
+
+.shadow {
+    text-shadow: 2px 2px 12px var(--orange-color), 2px 2px 4px var(--orange-color);
+}
+
+.home-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+.space-t {
+    margin-top: 100px;
+}
+
+.space-p {
+    padding: 60px;
+}
+
+.space-pt {
+    padding-top: 90px;
+}
+
+.home {
+    background-image: url('banner/house.jpg');
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; 
+    width: 100%;
+    position: relative;
+    animation: auto-bg 24s infinite ease-in-out;
+    display: flex;
+    justify-content: center; 
+}
+
+.home button {
+    align-self: center; 
+    margin-top: 130px; 
+    z-index: 1; 
+}
+
+.button-bg {
+    background-color: var(--orange-color) !important;
+    color: #ffffff !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-bg:hover {
+    background-color: #ffffff!important;
+    color: var(--orange-color) !important; 
+}
+
+.home:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.home .home-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+@keyframes auto-bg {
+    0% {
+      background-image: url(banner/housea.png);
+    }
+    20% {
+      background-image: url(banner/house.jpg);
+    }
+    40% {
+      background-image: url(banner/house1.jpg);
+    }
+    60% {
+      background-image: url(banner/house2.jpg);
+    }
+    80% {
+      background-image: url(banner/house3.jpg);
+    }
+    100% {
+      background-image: url(banner/housea.png);
+    }
+}
+
+.orange_bg {
+    background-color: var(--orange-color)!important;
+}
+
+.about {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(64, 64, 64, 0.7)), url('images/about.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-container {
+    flex: 1;
+}
+
+.footer-section {
+    flex-shrink: 0;
+}
+
+.box {
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+    cursor: move;
+    position: relative;
+}
+
+.static {
+    background-color: var(--orange-color) !important;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+}
+
+.box ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 600px;
+    z-index: 1;
+}
+
+.box ul li {
+    position: relative;
+    width: 900px;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+.box ul:hover li {
+    width: 40px;
+}
+
+.box ul li:hover {
+    width: 900px;
+}
+
+.box ul li:hover::before {
+    opacity: 0;
+}
+
+.box ul li img {
+    width: 900px;
+    height: 600px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.box-set {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 900px;
+    height: auto;
+    opacity: 0.8;
+    background-color: black;
+}
+
+.box-set > p {
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.box-set-4 {
+    width: 900px;
+}
+
+.custom-border {
+    border: 5px solid var(--orange-color); 
+    border-radius: 5px; 
+}
+
+.card-img-overlay {
+    position: relative; 
+}
+
+.card-img-overlay h5 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px); 
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    text-align: center;
+    border: 2px solid var(--orange-color); 
+    border-radius: 5px;     
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:active,
+.nav-tabs .nav-link:hover {
+    color: white;
+}
+
+.nav-tabs .nav-link {
+    color: white;
+}
+
+.nav-tabs .nav-link.active {
+    color: blue; 
+}
+
+.border-img {
+    border: 5px solid var(--orange-color); 
+}
+.border-img-w {
+    border: 5px solid white;
+    border-radius: 10px; 
+}
+
+.img-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.background-info {
+    margin-top: 5px;
+    color: #555; 
+}
+
+.background-info span {
+    display: block;
+    margin-top: 5px;
+}
+
+.background-info span.label {
+    font-weight: bold;
+    color: black; 
+}
+
+.name-role {
+    text-align: center;
+}
+
+.name-role .name {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.name-role .role {
+    display: block;
+    font-size: 1rem;
+    color: var(--orange-color);
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.footer-section {
+    flex-shrink: 0;
+}
+
+.event-img {
+    width: 100%; 
+    height: 300px;
+    object-fit: contain;
+}
+
+.checked {
+    color: gold;
+}
+
+.standard-img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    margin-right: 15px; 
+}
+
+.navbar {
+    z-index: 10;
+    transition: box-shadow 0.3s ease-in-out !important;
+}
+
+.navbar-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-header {
+    border-radius: 0 !important;
+}
